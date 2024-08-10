@@ -1,6 +1,6 @@
 ## Expense Tracker
 
-A simple image hosting application written in Django Rest Framework.
+A simple expense tracker project written in Django Rest Framework.
 
 This project is primarily used to demonstrate how to deploy Django to Google Cloud Platform.
 
