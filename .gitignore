@@ -103,3 +103,5 @@ env/
 .vscode/
 .idea/
 .idea
+/__pycache__/
+.gitignore

@@ -30,6 +30,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "expense",
+
+    "drf_spectacular",
+    "drf_spectacular_sidecar",
 ]
 
 MIDDLEWARE = [
@@ -41,6 +44,24 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+}
+
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Expense Tracker",
+    "DESCRIPTION": "Expense Tracker API",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
+    "REDOC_DIST": "SIDECAR",
+}
 
 ROOT_URLCONF = "expense_tracker.urls"
 
